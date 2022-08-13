@@ -1,0 +1,357 @@
+{
+	"info": {
+		"_postman_id": "3ef15895-e317-415b-ac06-3aa37d092c0d",
+		"name": "APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerName\": \"msd\",\r\n    \"email\": \"msd@gmail.com\",\r\n    \"mobile\": 98123,\r\n    \"city\": \"hyd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3600/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3600",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3600/users/62f76c76c317ff210c1d80d9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3600",
+					"path": [
+						"users",
+						"62f76c76c317ff210c1d80d9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3600/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3600",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Customer by Id",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerName\": \"asdfe\",\r\n    \"email\": \"asdfe@gmail.com\",\r\n    \"mobile\": \"asdffe\",\r\n    \"city\": \"asdfe\",\r\n    \"id\": \"62f7606dbe29ac5bf83121b3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3600/users/62f747420b5d7b0d340ab021",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3600",
+					"path": [
+						"users",
+						"62f747420b5d7b0d340ab021"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete customer by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3600/users/62f747420b5d7b0d340ab021",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3600",
+					"path": [
+						"users",
+						"62f747420b5d7b0d340ab021"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Purchase order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productName\": \"String\",\r\n    \"quantity\": 5,\r\n    \"pricing\": 500,\r\n    \"mrp\": 500,\r\n    \"customerId\": \"62f76c76c317ff210c1d80d9\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3600/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3600",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get purchase order by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3600/orders/62f76d6f7816974798d0d8ea",
+					"host": [
+						"localhost"
+					],
+					"port": "3600",
+					"path": [
+						"orders",
+						"62f76d6f7816974798d0d8ea"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all purchase orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3600/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "3600",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete purchase order by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3600/orders/62f76d817816974798d0d8ed",
+					"host": [
+						"localhost"
+					],
+					"port": "3600",
+					"path": [
+						"orders",
+						"62f76d817816974798d0d8ed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Shipping",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\": \"String\",\r\n    \"city\": \"beng\",\r\n    \"pincode\": 54322,\r\n    \"orderId\": \"62f76d6f7816974798d0d8ea\",\r\n    \"customerId\": \"62f76c76c317ff210c1d80d9\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3600/shippings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3600",
+					"path": [
+						"shippings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Shipping by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3600/shippings/62f774a05a57574cd4ab5d81",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3600",
+					"path": [
+						"shippings",
+						"62f774a05a57574cd4ab5d81"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all shippings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3600/shippings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3600",
+					"path": [
+						"shippings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete shippings by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3600/shippings/62f774a05a57574cd4ab5d81",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3600",
+					"path": [
+						"shippings",
+						"62f774a05a57574cd4ab5d81"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Shippings by city",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3600/order/city/mum",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3600",
+					"path": [
+						"order",
+						"city",
+						"mum"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get purchase order List By Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3600/order/customers/listByCustomer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3600",
+					"path": [
+						"order",
+						"customers",
+						"listByCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ShipmentDetails, order details of each customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3600/shipmentDetail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3600",
+					"path": [
+						"shipmentDetail"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
